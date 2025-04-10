@@ -1,3 +1,4 @@
+import os
 from datetime import datetime, timedelta
 from typing import Optional
 from fastapi import Depends, FastAPI, HTTPException, status
@@ -8,11 +9,15 @@ from pydantic import BaseModel
 from sqlmodel import select, Session
 from app.database import engine
 from app.models.models import User
+from dotenv import load_dotenv
+
+# Cargar variables de entorno
+load_dotenv()
 
 # Configuración de seguridad
-SECRET_KEY = "tu_clave_secreta_muy_segura"
+SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES"))
 
 
 

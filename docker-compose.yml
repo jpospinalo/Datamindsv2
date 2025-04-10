@@ -8,10 +8,10 @@ services:
     depends_on:
       - db
     environment:
-      - DB_USERNAME=admin
-      - DB_PASSWORD=adminadmin
-      - DB_HOST=db
-      - DB_DATABASE=dataminds
+      - DB_USERNAME= ${DB_USERNAME}
+      - DB_PASSWORD= ${DB_PASSWORD}
+      - DB_HOST= ${DB_HOST}
+      - DB_DATABASE= ${DB_DATABASE}
     volumes:
       - .:/app
     networks:
@@ -21,10 +21,10 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: dataminds
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: adminadmin
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     ports:
       - "3306:3306"
     volumes:
