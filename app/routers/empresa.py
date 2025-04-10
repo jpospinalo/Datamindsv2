@@ -1,7 +1,7 @@
 from fastapi import FastAPI, APIRouter, HTTPException
 from typing import List
-from schemas.esquemas import EmpresaIn, EmpresaOut
-from services.crud_empresa import get_all_empresas, get_empresa_by_id, create_empresa, delete_empresa, update_empresa
+from app.schemas.esquemas import EmpresaIn, EmpresaOut
+from app.services.crud_empresa import get_all_empresas, get_empresa_by_id, create_empresa, delete_empresa, update_empresa
 
 router_empresa = APIRouter()
 

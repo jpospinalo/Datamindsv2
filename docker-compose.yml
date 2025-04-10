@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_USERNAME=admin
+      - DB_PASSWORD=adminadmin
+      - DB_HOST=db
+      - DB_DATABASE=dataminds
+    volumes:
+      - .:/app
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: dataminds
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: adminadmin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mysql_data:

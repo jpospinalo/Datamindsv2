@@ -1,6 +1,6 @@
 from sqlmodel import select, Session
-from models.models import Client
-from schemas.esquemas import ClientIn, ClientOut
+from app.models.models import Client
+from app.schemas.esquemas import ClientIn, ClientOut
 from app.database import engine
 from typing import List
 

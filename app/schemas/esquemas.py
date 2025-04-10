@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from pydantic import Field
 from pydantic import BaseModel, Field
 from enum import Enum
-from app.models import Obligacion
+from app.models.models import Client, Obligacion, Empresa
 
 class DocumentType(str, Enum):
     CEDULA = "CEDULA"

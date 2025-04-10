@@ -1,6 +1,6 @@
 from sqlmodel import select, Session
-from models.models import Obligacion
-from schemas.esquemas import ObligacionIn, ObligacionOut
+from app.models.models import Obligacion
+from app.schemas.esquemas import ObligacionIn, ObligacionOut
 from app.database import engine
 from typing import List
 

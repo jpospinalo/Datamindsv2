@@ -1,6 +1,6 @@
 from sqlmodel import select, Session
-from models.models import Empresa
-from schemas.esquemas import EmpresaIn, EmpresaOut
+from app.models.models import Empresa
+from app.schemas.esquemas import EmpresaIn, EmpresaOut
 from app.database import engine
 from typing import List
 

@@ -7,7 +7,7 @@ from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlmodel import select, Session
 from app.database import engine
-from models.models import User
+from app.models.models import User
 
 # Configuración de seguridad
 SECRET_KEY = "tu_clave_secreta_muy_segura"
