@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from pydantic import Field
 from pydantic import BaseModel, Field
 from enum import Enum
+from app.models import Obligacion
 
 class DocumentType(str, Enum):
     CEDULA = "CEDULA"
@@ -49,8 +50,12 @@ class BaseClient(BaseModel):
         description="El segundo apellido del cliente (opcional). Solo se permiten letras y espacios."
     )
     
-    obligaciones : list["Obligacion"]
-
+    obligaciones: list["Obligacion"] = Field(
+        default=[],
+        title="Obligaciones",
+        description="Lista de obligaciones asociadas al cliente."
+    )
+    
 class ClientIn(BaseClient):
     pass
 

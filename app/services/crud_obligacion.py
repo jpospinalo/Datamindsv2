@@ -1,7 +1,7 @@
 from sqlmodel import select, Session
-from .models import Obligacion
-from .schemas import ObligacionIn, ObligacionOut
-from .database import engine
+from models.models import Obligacion
+from schemas.esquemas import ObligacionIn, ObligacionOut
+from app.database import engine
 from typing import List
 
 def create_obligacion(Obligacion_in: ObligacionIn) -> ObligacionOut:

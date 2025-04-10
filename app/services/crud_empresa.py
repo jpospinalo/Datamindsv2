@@ -1,7 +1,7 @@
 from sqlmodel import select, Session
-from .models import Empresa
-from .schemas import EmpresaIn, EmpresaOut
-from .database import engine
+from models.models import Empresa
+from schemas.esquemas import EmpresaIn, EmpresaOut
+from app.database import engine
 from typing import List
 
 def create_empresa(Empresa_in: EmpresaIn) -> EmpresaOut:

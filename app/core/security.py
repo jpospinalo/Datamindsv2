@@ -6,8 +6,8 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
 from sqlmodel import select, Session
-from .database import engine
-from .models import User
+from app.database import engine
+from models.models import User
 
 # Configuración de seguridad
 SECRET_KEY = "tu_clave_secreta_muy_segura"

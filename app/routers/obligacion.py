@@ -1,7 +1,7 @@
 from fastapi import FastAPI, APIRouter, HTTPException
 from typing import List
-from .schemas import ObligacionIn, ObligacionOut
-from .crud_obligacion import get_all_obligacion, get_obligacion_by_id, create_obligacion, delete_obligacion, update_obligacion
+from schemas.esquemas import ObligacionIn, ObligacionOut
+from services.crud_obligacion import get_all_obligacion, get_obligacion_by_id, create_obligacion, delete_obligacion, update_obligacion
 
 router_obligacion = APIRouter()
 

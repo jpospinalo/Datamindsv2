@@ -1,7 +1,8 @@
 from fastapi import FastAPI, APIRouter, HTTPException, Path
 from typing import List, Annotated
-from .schemas import ClientIn, ClientOut
-from .crud_cliente import get_all_clients, get_client_by_id, create_client, delete_client, update_client
+from services.crud_cliente import get_all_clients, get_client_by_id, create_client, delete_client, update_client
+from schemas.esquemas import ClientIn, ClientOut
+
 
 
 router = APIRouter()

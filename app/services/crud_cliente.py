@@ -1,7 +1,7 @@
 from sqlmodel import select, Session
-from .models import Client
-from .schemas import ClientIn, ClientOut
-from .database import engine
+from models.models import Client
+from schemas.esquemas import ClientIn, ClientOut
+from app.database import engine
 from typing import List
 
 def create_client(client_in: ClientIn) -> ClientOut:
