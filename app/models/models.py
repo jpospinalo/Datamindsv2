@@ -20,7 +20,7 @@ class Client(SQLModel, table=True):
     
     __tablename__ = "cliente"
  
-    id_cliente: str | None = Field(primary_key=True)
+    id_cliente: str = Field(primary_key=True)
     tipo_documento: str 
     primer_nombre: str
     segundo_nombre: str | None = None

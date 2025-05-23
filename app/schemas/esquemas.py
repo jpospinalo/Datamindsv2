@@ -64,14 +64,14 @@ class ClientOut(BaseClient):
     pass
 
 class BaseEmpresa(BaseModel):
-    id_empresa: int 
+    #id_empresa: int 
     nombre_empresa: str 
     
 class EmpresaIn(BaseEmpresa):
     pass
 
 class EmpresaOut(BaseEmpresa):
-    pass
+    id_empresa: int
 
 class BaseObligacion(BaseModel):
     id_obligacion: int 
